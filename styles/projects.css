@@ -1,0 +1,116 @@
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.project-card {
+  position: relative;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: #999b9b66;
+}
+
+.project-card__thumbnail {
+  aspect-ratio: 12 / 9;
+  background: var(--clr-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card__thumbnail > img {
+  height: 100%;
+}
+
+.project-card__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+.project-card__type {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--clr-silver);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.project-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-off-white);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-card__links {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--clr-border);
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--clr-off-white);
+  padding: 6px 14px;
+  border: 1px solid var(--clr-border);
+  border-radius: 100px;
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+  letter-spacing: 0.04em;
+}
+
+.project-card__link:hover {
+  color: var(--clr-silver);
+  border-color: #999b9b66;
+  background: var(--clr-silver-glow);
+}
+
+.project-card__link svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (min-width: 640px) {
+  .project-card__thumbnail {
+    aspect-ratio: 14 / 9;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

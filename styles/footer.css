@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  z-index: 99;
+  padding-block: var(--space-lg);
+  margin-top: 10rem;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  text-align: center;
+  max-width: 1024px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.footer__copy {
+  font-size: var(--fs-xs);
+  color: var(--clr-silver);
+}

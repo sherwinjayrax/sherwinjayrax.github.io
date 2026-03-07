@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shopify Developer specializing in custom theme development — portfolio of Sherwin Romano."
+    />
+
+    <title>Sherwin Romano</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="script.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <!-- Skip to main content (accessibility) -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Grid Background -->
+    <div class="grid-bg" aria-hidden="true"></div>
+    <!-- Bottom fade over grid -->
+    <div class="grid-fade" aria-hidden="true"></div>
+
+    <header class="header reveal" role="banner">
+      <div class="header__inner">
+        <a
+          href="/index.html"
+          class="header__logo"
+          aria-label="Sherwin Romano — Home"
+        >
+          Sherwin Romano
+        </a>
+
+        <!-- Mobile toggle button (hidden on desktop) -->
+        <button
+          class="header__menu-toggle"
+          id="socialToggle"
+          aria-label="Open social links"
+          aria-expanded="false"
+          aria-controls="socialSidebar"
+        >
+          <span class="header__menu-toggle-bar"></span>
+          <span class="header__menu-toggle-bar"></span>
+          <span class="header__menu-toggle-bar"></span>
+        </button>
+
+        <!-- Desktop nav (unchanged) -->
+        <nav
+          class="header__social header__social--desktop"
+          aria-label="Social media links"
+        >
+          <a
+            href="mailto:sherwinjayromano@gmail.com"
+            class="header__social-link"
+            aria-label="Email me"
+            title="Gmail"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sherwinjayromano/"
+            class="header__social-link"
+            aria-label="LinkedIn profile"
+            title="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/sherwinjayrax"
+            class="header__social-link"
+            aria-label="GitHub profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://instagram.com/sherwinromanus"
+            class="header__social-link"
+            aria-label="Instagram profile"
+            title="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Mobile sidebar -->
+      <div class="header__sidebar" id="socialSidebar" aria-hidden="true">
+        <!-- Overlay -->
+        <div class="header__sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Panel -->
+        <aside class="header__sidebar-panel">
+          <h2 class="header__sidebar-label">Connect with me</h2>
+          <nav class="header__sidebar-nav" aria-label="Social media links">
+            <a
+              href="mailto:sherwinjayromano@gmail.com"
+              class="header__sidebar-link"
+              aria-label="Email me"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span>Gmail</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sherwinjayromano/"
+              class="header__sidebar-link"
+              aria-label="LinkedIn profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/sherwinjayrax"
+              class="header__sidebar-link"
+              aria-label="GitHub profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://instagram.com/sherwinromanus"
+              class="header__sidebar-link"
+              aria-label="Instagram profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </nav>
+        </aside>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="about" class="about reveal" aria-labelledby="hero-about">
+        <div class="about__inner wrapper">
+          <div class="about__header">
+            <h2 id="hero-about" class="about__heading">About Me</h2>
+          </div>
+
+          <div class="about__content">
+            <div class="about__text">
+              <p class="about__bio">
+                I'm <strong>Sherwin Romano</strong>, a Shopify developer
+                specializing in custom theme development. With a solid
+                foundation in front-end development and a focused transition
+                into the Shopify ecosystem, I build performant, pixel-perfect
+                storefronts using Shopify Liquid, modern front-end technologies,
+                and the Shopify 2.0 architecture.
+              </p>
+              <p class="about__bio">
+                My background in front-end development gives me a strong eye for
+                design precision and technical execution — translating brand
+                identities into fully functional, conversion-focused online
+                stores. I approach every project with attention to detail and a
+                genuine interest in delivering work that performs as well as it
+                looks.
+              </p>
+              <p class="about__bio">
+                Currently building my Shopify development portfolio through
+                freelance projects, and open to full-time opportunities where I
+                can grow alongside a team building exceptional e-commerce
+                experiences.
+              </p>
+            </div>
+
+            <aside class="about__meta" aria-label="Quick info">
+              <dl class="about__meta-list">
+                <div class="about__meta-item">
+                  <dt class="about__meta-label">Based in</dt>
+                  <dd class="about__meta-value">Philippines</dd>
+                </div>
+                <div class="about__meta-item">
+                  <dt class="about__meta-label">Experience</dt>
+                  <dd class="about__meta-value">
+                    Frontend & Shopify Development
+                  </dd>
+                </div>
+
+                <div class="about__meta-item">
+                  <dt class="about__meta-label">Expertise</dt>
+                  <dd class="about__meta-value">
+                    Custom Theme Development, UI Development
+                  </dd>
+                </div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="skills reveal"
+        aria-labelledby="skills-heading"
+      >
+        <div class="wrapper">
+          <h2 id="skills-heading" class="section__title">Skills</h2>
+          <div class="skills__grid" role="list">
+            <skill-card
+              name="Shopify"
+              tags="Shopify Liquid, Storefront API, Metafields & Metaobjects, Online Store 2.0"
+            >
+              <svg
+                slot="icon"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.75 10.5V6C15.75 3.92893 14.0711 2.25 12 2.25C9.92893 2.25 8.25 3.92893 8.25 6V10.5M19.606 8.50723L20.8692 20.5072C20.9391 21.1715 20.4183 21.75 19.7504 21.75H4.24963C3.58172 21.75 3.06089 21.1715 3.13081 20.5072L4.39397 8.50723C4.45424 7.93466 4.93706 7.5 5.51279 7.5H18.4872C19.0629 7.5 19.5458 7.93466 19.606 8.50723ZM8.625 10.5C8.625 10.7071 8.4571 10.875 8.25 10.875C8.04289 10.875 7.875 10.7071 7.875 10.5C7.875 10.2929 8.04289 10.125 8.25 10.125C8.4571 10.125 8.625 10.2929 8.625 10.5ZM16.125 10.5C16.125 10.7071 15.9571 10.875 15.75 10.875C15.5429 10.875 15.375 10.7071 15.375 10.5C15.375 10.2929 15.5429 10.125 15.75 10.125C15.9571 10.125 16.125 10.2929 16.125 10.5Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </skill-card>
+            <skill-card
+              name="Frontend Languages"
+              tags="HTML, CSS / SCSS, JavaScript, Tailwind CSS"
+            >
+              <svg
+                slot="icon"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.25 6.75L22.5 12L17.25 17.25M6.75 17.25L1.5 12L6.75 6.75M14.25 3.75L9.75 20.25"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </skill-card>
+            <skill-card
+              name="Performance Optimization"
+              tags="Core Web Vitals, Lazy Loading, CRO, SEO"
+            >
+              <svg
+                slot="icon"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.5904 14.3696C15.6948 14.8128 15.75 15.275 15.75 15.75C15.75 19.0637 13.0637 21.75 9.75 21.75V16.9503M15.5904 14.3696C19.3244 11.6411 21.75 7.22874 21.75 2.25C16.7715 2.25021 12.3595 4.67586 9.63122 8.40975M15.5904 14.3696C13.8819 15.6181 11.8994 16.514 9.75 16.9503M9.63122 8.40975C9.18777 8.30528 8.72534 8.25 8.25 8.25C4.93629 8.25 2.25 10.9363 2.25 14.25H7.05072M9.63122 8.40975C8.38285 10.1183 7.48701 12.1007 7.05072 14.25M9.75 16.9503C9.64659 16.9713 9.54279 16.9912 9.43862 17.0101C8.53171 16.291 7.70991 15.4692 6.99079 14.5623C7.00969 14.4578 7.02967 14.3537 7.05072 14.25M4.81191 16.6408C3.71213 17.4612 3 18.7724 3 20.25C3 20.4869 3.0183 20.7195 3.05356 20.9464C3.28054 20.9817 3.51313 21 3.75 21C5.22758 21 6.53883 20.2879 7.35925 19.1881M16.5 9C16.5 9.82843 15.8284 10.5 15 10.5C14.1716 10.5 13.5 9.82843 13.5 9C13.5 8.17157 14.1716 7.5 15 7.5C15.8284 7.5 16.5 8.17157 16.5 9Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </skill-card>
+            <skill-card
+              name="Dev Tools"
+              tags="Git, Github, Shopify CLI, VS Code, Firefox Developer Edition, Figma"
+            >
+              <svg
+                slot="icon"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.75 7.5L9.75 9.75L6.75 12M11.25 12H14.25M5.25 20.25H18.75C19.9926 20.25 21 19.2426 21 18V6C21 4.75736 19.9926 3.75 18.75 3.75H5.25C4.00736 3.75 3 4.75736 3 6V18C3 19.2426 4.00736 20.25 5.25 20.25Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </skill-card>
+            <skill-card
+              name="Theme Architecture"
+              tags="Blocks, Sections, Templates, JSON Schema"
+            >
+              <svg
+                slot="icon"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.4194 15.1694L17.25 21C18.2855 22.0355 19.9645 22.0355 21 21C22.0355 19.9645 22.0355 18.2855 21 17.25L15.1233 11.3733M11.4194 15.1694L13.9155 12.1383C14.2315 11.7546 14.6542 11.5132 15.1233 11.3733M11.4194 15.1694L6.76432 20.8219C6.28037 21.4096 5.55897 21.75 4.79768 21.75C3.39064 21.75 2.25 20.6094 2.25 19.2023C2.25 18.441 2.59044 17.7196 3.1781 17.2357L10.0146 11.6056M15.1233 11.3733C15.6727 11.2094 16.2858 11.1848 16.8659 11.2338C16.9925 11.2445 17.1206 11.25 17.25 11.25C19.7353 11.25 21.75 9.23528 21.75 6.75C21.75 6.08973 21.6078 5.46268 21.3523 4.89779L18.0762 8.17397C16.9605 7.91785 16.0823 7.03963 15.8262 5.92397L19.1024 2.64774C18.5375 2.39223 17.9103 2.25 17.25 2.25C14.7647 2.25 12.75 4.26472 12.75 6.75C12.75 6.87938 12.7555 7.00749 12.7662 7.13411C12.8571 8.20956 12.6948 9.39841 11.8617 10.0845L11.7596 10.1686M10.0146 11.6056L5.90901 7.5H4.5L2.25 3.75L3.75 2.25L7.5 4.5V5.90901L11.7596 10.1686M10.0146 11.6056L11.7596 10.1686M18.375 18.375L15.75 15.75M4.86723 19.125H4.87473V19.1325H4.86723V19.125Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </skill-card>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="section reveal"
+        aria-labelledby="projects-heading"
+      >
+        <div class="wrapper">
+          <h2 id="projects-heading" class="section__title">Projects</h2>
+
+          <div class="projects__grid">
+            <article class="project-card reveal">
+              <div class="project-card__thumbnail">
+                <img
+                  src="/assets/Little BoLiving.webp"
+                  alt="Little BoLiving banner"
+                  width="1280"
+                  height="776"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__type">Custom Theme Development</p>
+                <h3 class="project-card__title">Little BoLiving</h3>
+                <p class="project-card__desc">
+                  Converted a full Figma design into a custom Shopify theme from
+                  scratch featuring 8+ custom sections including a hero banner,
+                  age-based product grid, and a conversion-focused CTA. Built on
+                  a custom Dawn architecture as per client specifications.
+                </p>
+
+                <nav class="project-card__links" aria-label="Project links">
+                  <a
+                    href="https://drive.google.com/drive/folders/1KChdyVfTEre9T_0X_hVZ6n1pJs8WMRzJ?usp=drive_link"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View demo for Little BoLiving"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15,3 21,3 21,9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View demo
+                  </a>
+                  <a
+                    href="#"
+                    class="project-card__link"
+                    aria-label="GitHub repo for Little BoLiving"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      />
+                    </svg>
+                    GitHub
+                  </a>
+                </nav>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="project-card__thumbnail">
+                <img
+                  src="/assets/Spotminders.jpg"
+                  alt="Spotminders banner"
+                  width="2560"
+                  height="1664"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__type">Custom Theme Development</p>
+                <h3 class="project-card__title">
+                  Spotminders Clone (Homepage, Collection Page & PDP)
+                </h3>
+                <p class="project-card__desc">
+                  Cloned the core storefront pages of Spotminders Homepage,
+                  Collections, and Product Detail Page during my internship
+                  program. Focused on accurate design replication, clean code
+                  structure, and Shopify best practices.
+                </p>
+
+                <nav class="project-card__links" aria-label="Project links">
+                  <a
+                    href="https://drive.google.com/drive/folders/14HO1ee7NZqYkycuW3Ywkxo7i1tWWcpXt?usp=drive_link"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View demo for Spotminders"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15,3 21,3 21,9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View demo
+                  </a>
+                  <a
+                    href="#"
+                    class="project-card__link"
+                    aria-label="GitHub repo for Spotminders"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      />
+                    </svg>
+                    GitHub
+                  </a>
+                </nav>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer__inner">
+        <p class="footer__copy">
+          Copyright &copy; <span class="footer-year"></span>
+          <span>Sherwin Romano</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
