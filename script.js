@@ -1,5 +1,17 @@
 import "./components.js";
 
+const lenis = new Lenis({
+  duration: 1,
+  smooth: true,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 /* ── Sidebar toggle ── */
 const toggle = document.getElementById("socialToggle");
 const sidebar = document.getElementById("socialSidebar");
